@@ -10,6 +10,7 @@ import {Coches} from '../coches';
 export class CochesListComponent  implements OnInit {
   data:Coches[] = [];
 
+
   constructor(private cochesService: CochesService) {
 
   }
@@ -27,6 +28,27 @@ export class CochesListComponent  implements OnInit {
       }
 
     );
+  }
+
+  countValues(data:Coches[]): { marca: string; count: number }[] {
+    interface marcaCount{
+      marca: string;
+      count: number;
+    }
+
+    let ArrayCount: marcaCount[] = [];
+
+    data.forEach((item:any)=>{
+      let Index: number = ArrayCount.findIndex( marcaCount => marcaCount.marca === item.marca);
+      if( Index !== -1 ){
+        ArrayCount[Index]['count'] = ArrayCount[Index]['count'] + 1;
+      } else {
+        ArrayCount.push({marca: item.marca, count: 1});
+      }
+    })
+
+    return ArrayCount;
+
   }
 
   protected readonly Coches = Coches;
