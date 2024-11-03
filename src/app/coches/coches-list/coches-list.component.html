@@ -1,1 +1,19 @@
-<p> {{ Coches }} </p>
+<table class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="row" class="nomcol" > # </th>
+    <th scope="row" class="nomcol"> Marca </th>
+    <th scope="row" class="nomcol"> Linea </th>
+    <th scope="row" class="nomcol"> Modelo </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let row of data">
+    <th scope="row">{{ row.id }}</th>
+    <td>{{ row.marca }}</td>
+    <td>{{ row.linea }}</td>
+    <td>{{ row.modelo }}</td>
+  </tr>
+  </tbody>
+</table>
+
