@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+h2 {
+  text-align: left;
+  color: black;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+hr {
+  color: black;
+  border:3px solid;
+}
+
