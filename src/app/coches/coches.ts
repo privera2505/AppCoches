@@ -1,19 +1,19 @@
 export class Coches {
-  id:string;
+  id:number;
   marca:string;
   linea:string;
   referencia:string;
-  modelo:string;
-  kilometraje:string;
+  modelo:number;
+  kilometraje:number;
   color:string;
   image:string;
   constructor(cochesData:{
-    "id":string;
+    "id":number;
     "marca":string;
     "linea":string;
     "referencia":string;
-    "modelo":string;
-    "kilometraje":string;
+    "modelo":number;
+    "kilometraje":number;
     "color":string;
     "image":string;
   }){

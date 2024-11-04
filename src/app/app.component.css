@@ -14,4 +14,13 @@ hr {
   border:3px solid;
 }
 
+.footer {
+  text-align: center;
+  color: black;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
 
